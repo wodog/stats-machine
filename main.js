@@ -1,10 +1,11 @@
 const os = require('os')
 const StatsD = require('node-statsd')
 
-const prefix = process.env.PREFIX
+const prefix = process.argv[2]
 if (!prefix) {
   throw new Error('env PREFIX is required')
 }
+
 const client = new StatsD({
   host: '120.25.92.210',
   port: 8125,

@@ -6,5 +6,5 @@ stats for machine
 
 ```
 cd stats-machine
-PREFIX=[machine_name] node . &
+nohup node main.js [machine_name] &
 ```
